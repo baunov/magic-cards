@@ -12,6 +12,13 @@
   "files": [
     "/dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baunov/magic-cards.git"
+  },
+  "bugs": {
+    "url": "https://github.com/baunov/magic-cards/issues"
+  },
   "author": "Daniil Baunov",
   "license": "ISC",
   "devDependencies": {
