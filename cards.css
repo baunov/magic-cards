@@ -1,0 +1,74 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #424949;
+}
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(6, 120px);
+    grid-gap: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: black;
+
+}
+
+img {
+    display: block;
+}
+
+.card-content-test img {
+    transform: translateZ(20px);
+}
+
+.card-content-test .card-title {
+    transform: translateZ(40px);
+}
+
+x-magic-card .card-title {
+    position: absolute;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.4);
+    display: none;
+    animation: titleAppear 0.3s ease forwards;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(18px);
+    font-size: 16px;
+    font-weight: bold;
+    transform: scale(0.8);
+    border-radius: 4px;
+    -webkit-font-smoothing: subpixel-antialiased;
+    backface-visibility: hidden;
+    font-family: sans-serif;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.5);
+}
+
+x-magic-card[active] .card-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+x-magic-card::part(card-container) {
+    border: 1px solid rgba(255,255,255,0.3);
+    background: black;
+}
+
+
+@keyframes titleAppear {
+    0% {
+        bottom: -20%;
+    }
+    100% {
+        bottom: 0%;
+    }
+}
+
+
