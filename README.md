@@ -4,7 +4,9 @@
 
 This is a custom web component allowing to turn potentially any webpage element into a 3D magic card.
 
-[<img width="430" alt="Magic card" src="https://user-images.githubusercontent.com/54023692/201346464-9e182827-709c-4b7a-b271-b8e07372438e.png" width="50%">](https://user-images.githubusercontent.com/54023692/201338672-091e5c71-dd00-4569-bea5-14a41fb95fe5.mov)
+##### See example: https://baunov.github.io/magic-cards/
+
+<img width="430" alt="Magic card" src="https://user-images.githubusercontent.com/54023692/201346464-9e182827-709c-4b7a-b271-b8e07372438e.png" width="50%">
 
 The package includes 2 custom web components that can be used in any web page independent of framework (also without any framework):
 
