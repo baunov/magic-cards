@@ -1,7 +1,7 @@
 {
   "name": "magic-cards",
   "version": "1.0.2",
-  "description": "",
+  "description": "Custom web component allowing to turn potentially any webpage element into a 3D magic card",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
