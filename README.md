@@ -1,6 +1,8 @@
 # magic-cards
 
-Turn any webpage element into a 3D magic card.
+## What is that?
+
+This is a custom web component allowing to turn potentially any webpage element into a 3D magic card.
 
 https://user-images.githubusercontent.com/54023692/201338672-091e5c71-dd00-4569-bea5-14a41fb95fe5.mov
 
@@ -8,6 +10,16 @@ The package includes 2 custom web components that can be used in any web page in
 
 1. `<x-magic-card>`
 2. `<x-magic-card-particles>`
+
+## Installation
+
+1. From CDN:
+
+```<script src="https://unpkg.com/magic-cards"></script>```
+
+2. From npm (https://www.npmjs.com/package/magic-cards):
+
+```npm install magic-cards --save```
 
 ## Basic usage
 
