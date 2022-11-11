@@ -4,7 +4,7 @@
 
 This is a custom web component allowing to turn potentially any webpage element into a 3D magic card.
 
-https://user-images.githubusercontent.com/54023692/201338672-091e5c71-dd00-4569-bea5-14a41fb95fe5.mov
+[<img src="htt<img width="430" alt="Magic card" src="https://user-images.githubusercontent.com/54023692/201346464-9e182827-709c-4b7a-b271-b8e07372438e.png" width="50%">](https://user-images.githubusercontent.com/54023692/201338672-091e5c71-dd00-4569-bea5-14a41fb95fe5.mov)
 
 The package includes 2 custom web components that can be used in any web page independent of framework (also without any framework):
 
@@ -15,11 +15,15 @@ The package includes 2 custom web components that can be used in any web page in
 
 1. From CDN:
 
-```<script src="https://unpkg.com/magic-cards"></script>```
+```html
+<script src="https://unpkg.com/magic-cards"></script>
+```
 
 2. From npm (https://www.npmjs.com/package/magic-cards):
 
-```npm install magic-cards --save```
+```sh
+npm install magic-cards --save
+```
 
 ## Basic usage
 
@@ -29,7 +33,7 @@ The package includes 2 custom web components that can be used in any web page in
 4. Optionally add `<x-magic-card-particles count="20"></x-magic-card-particles>` within a card if you'd like to add particles.
 
 Example:
-```
+```html
 <x-magic-card radius="4">
     <div slot="content">
         <x-magic-card-particles count="20"></x-magic-card-particles>
@@ -46,14 +50,14 @@ Cards are configured globally. When `magic-cards` module is installed on the pag
 To configure cards behavior, call `MagicCardsManager.configure(<configuration object>)` after script is loaded.
 
 Example: 
-```
+```js
 MagicCardsManager.configure({
     activeCardScale: 1.8,
     maxRotateX: 20,
     maxRotateY: 20,
-    perspective: number;
-    scaleEasing: number;
-    rotateEasing: number;
+    perspective: 400,
+    scaleEasing: 1,
+    rotateEasing: 9,
 })
 ```
 
@@ -72,7 +76,7 @@ When a card becomes active, it sets `active` attribute on itself. That way you c
 The card shadow DOM wrapper element can also be styled (e.g. add a border to the card) using css `x-magic-card::part(card-container)` selector.
 
 Example:
-```
+```css
 x-magic-card[active] .card-title {
     color: red;
 }
@@ -88,7 +92,7 @@ x-magic-card::part(card-container) {
 You can listen to a custom event `active-change` on each card or on the parent. `event.detail` is boolean stating whether the given card is active.
 This event bubbles.
 
-```
+```js
 document.querySelector('.cards-container').addEventListener('active-change', (event) => {
     console.log(event.target, event.detail);
     if (event.detail) {
