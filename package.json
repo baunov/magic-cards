@@ -19,6 +19,7 @@
   "bugs": {
     "url": "https://github.com/baunov/magic-cards/issues"
   },
+  "keywords": ["achievements", "cards", "web component", "3d effect"],
   "author": "Daniil Baunov",
   "license": "ISC",
   "devDependencies": {
