@@ -107,7 +107,6 @@ export class MagicCardParticlesComponent extends HTMLElement {
         this.shadowRoot!.appendChild(tmpl.content.cloneNode(true));
         this.canvas = this.shadowRoot!.querySelector('canvas')!;
         this.ctx = this.canvas.getContext('2d')!;
-        console.log('Particles init', this.shadowRoot);
     }
 
     start(): void {
@@ -169,7 +168,6 @@ export class MagicCardParticlesComponent extends HTMLElement {
             // alpha change
             b.phase += this.alpha_f;
             b.alpha = Math.abs(Math.cos(b.phase)) * 0.3;
-            // console.log(b.alpha);
         });
 
         this.balls = [...new_balls];
@@ -234,8 +232,6 @@ export class MagicCardParticlesComponent extends HTMLElement {
     }
 
     connectedCallback() {
-
-        console.log('Particles connected', this.canvas);
     }
 
     attributeChangedCallback(name: string, oldValue: any, newValue: any) {
@@ -246,7 +242,6 @@ export class MagicCardParticlesComponent extends HTMLElement {
             this.canvas.height = this.height;
         }
         if (name === 'playing') {
-            console.log('Playing', newValue);
             if (this.playing) {
                 this.start();
             } else {

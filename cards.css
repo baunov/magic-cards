@@ -44,8 +44,6 @@ x-magic-card .card-title {
     font-weight: bold;
     transform: scale(0.8);
     border-radius: 4px;
-    -webkit-font-smoothing: subpixel-antialiased;
-    backface-visibility: hidden;
     font-family: sans-serif;
     text-shadow: 1px 1px 0 rgba(0,0,0,0.5);
 }

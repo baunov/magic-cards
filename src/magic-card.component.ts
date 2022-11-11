@@ -47,13 +47,9 @@ tmpl.innerHTML = `
     </div>
 `;
 
-type CardCEInputs = 'disabled';
-
 export class MagicCardComponent extends HTMLElement {
     cardElem!: HTMLDivElement;
     cardBackground!: HTMLDivElement;
-    backgroundContent!: HTMLElement;
-    canvas!: HTMLCanvasElement;
     private curAnimateState: CardAnimateData = {
         rotateX: 0,
         rotateY: 0,
@@ -77,13 +73,6 @@ export class MagicCardComponent extends HTMLElement {
 
     static get observedAttributes() {
         return ['disabled', 'card-class'];
-    }
-
-    set cardClass(cardClass: string) {
-        this.setAttribute('card-class', cardClass);
-    }
-    get cardClass() {
-        return this.getAttribute('card-class') ?? '';
     }
 
     set radius(radius: number) {
@@ -188,33 +177,11 @@ export class MagicCardComponent extends HTMLElement {
     }
 
     connectedCallback() {
-        console.log('Connected');
         MagicCardsManager.getInstance().registerCard(this);
         this.updateRectAndCenter(this.cardElem.getBoundingClientRect());
-        /*this.cardElem!.addEventListener('slotchange', e => {
-            const slot: HTMLSlotElement = e.target as HTMLSlotElement;
-            if (slot.name == 'item') {
-                this.backgroundContent = slot.assignedElements().find((elem) => {
-                    elem.
-                });
-                alert("Items: " + this.items);
-            }
-        });*/
     }
 
     private updateBackgroundSlotContent(): void {
-    }
-
-    attributeChangedCallback(name: string, oldValue: any, newValue: any) {
-        console.log('attributeChangedCallback', {name, oldValue, newValue});
-        if (name === 'card-class') {
-            if (oldValue) {
-                this.cardElem!.classList.remove(oldValue)
-            }
-            if (newValue) {
-                this.cardElem!.classList.add(this.cardClass);
-            }
-        }
     }
 
     disconnectedCallback() {
